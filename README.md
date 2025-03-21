@@ -8,3 +8,9 @@ The Entra App Registration config is set in secrets using https://github.com/asp
 		<secret name="ida:RedirectUri" value="Your apps URL" />
 
  For running in an Azure Web App, just set the Environment Settings for the Web App to the correct values (grabbing the secret from KV) as per normal.
+
+The app current uses older versions of the Microsoft Graph SDK. 
+Microsoft.Graph - 4.54.0
+Microosft.Graph.Core - 2.0.15
+The newer versions signficantly change the way the SDK works and I didn't have time to refactor the app to use the new SDK. If you want to take a look at the new SDK, see here:
+https://github.com/microsoftgraph/msgraph-sdk-dotnet/blob/main/docs/upgrade-to-v5.md
