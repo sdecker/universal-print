@@ -1,4 +1,4 @@
-﻿namespace graph_tutorial.Models
+﻿namespace universal_print.Models
 {
     // Simple class to serialize user details
     public class CachedUser

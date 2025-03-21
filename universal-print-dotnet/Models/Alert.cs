@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace graph_tutorial.Models
+namespace universal_print.Models
 {
     // Used to flash error messages in the app's views.
     public class Alert

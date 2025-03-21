@@ -1,11 +1,11 @@
-﻿using graph_tutorial.Models;
+﻿using universal_print.Models;
 using Microsoft.Identity.Client;
 using Newtonsoft.Json;
 using System.Security.Claims;
 using System.Threading;
 using System.Web;
 
-namespace graph_tutorial.TokenStorage
+namespace universal_print.TokenStorage
 {
     public class SessionTokenStore
     {

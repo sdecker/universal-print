@@ -4,9 +4,9 @@ using Microsoft.Owin.Security.OpenIdConnect;
 using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
-using graph_tutorial.TokenStorage;
+using universal_print.TokenStorage;
 
-namespace graph_tutorial.Controllers
+namespace universal_print.Controllers
 {
     public class AccountController : Controller
     {

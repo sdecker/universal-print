@@ -9,11 +9,11 @@ using Owin;
 using System.Configuration;
 using System.Threading.Tasks;
 using System.Web;
-using graph_tutorial.Helpers;
-using graph_tutorial.TokenStorage;
+using universal_print.Helpers;
+using universal_print.TokenStorage;
 using System.Security.Claims;
 
-namespace graph_tutorial
+namespace universal_print
 {
     public partial class Startup
     {

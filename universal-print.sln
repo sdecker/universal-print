@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graph-tutorial", "graph-tutorial\graph-tutorial.csproj", "{98668FBE-A8AE-4A1C-81F3-90AA7882D328}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "universal-print-dotnet", "universal-print-dotnet\universal-print-dotnet.csproj", "{98668FBE-A8AE-4A1C-81F3-90AA7882D328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,8 @@
-﻿using graph_tutorial.Models;
+﻿using universal_print.Models;
 using Microsoft.Graph;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using graph_tutorial.TokenStorage;
+using universal_print.TokenStorage;
 using Microsoft.Identity.Client;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,7 +14,7 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using System;
 
-namespace graph_tutorial.Helpers
+namespace universal_print.Helpers
 {
     public static class GraphHelper
     {

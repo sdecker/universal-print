@@ -1,12 +1,12 @@
-﻿using graph_tutorial.Models;
+﻿using universal_print.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using graph_tutorial.TokenStorage;
+using universal_print.TokenStorage;
 using System.Security.Claims;
 using System.Web;
 using Microsoft.Owin.Security.Cookies;
 
-namespace graph_tutorial.Controllers
+namespace universal_print.Controllers
 {
     public abstract class BaseController : Controller
     {

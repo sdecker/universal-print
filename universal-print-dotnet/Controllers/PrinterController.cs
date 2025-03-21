@@ -1,4 +1,4 @@
-using graph_tutorial.Helpers;
+using universal_print.Helpers;
 using Microsoft.Graph;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace graph_tutorial.Controllers
+namespace universal_print.Controllers
 {
     public class PrinterController : BaseController
     {

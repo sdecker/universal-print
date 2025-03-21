@@ -1,9 +1,9 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(graph_tutorial.Startup))]
+[assembly: OwinStartup(typeof(universal_print.Startup))]
 
-namespace graph_tutorial
+namespace universal_print
 {
     public partial class Startup
     {
