@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /universal-print-dotnet/PrivateSettings.config
+/universal-print-dotnet/Web.local.config
