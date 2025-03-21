@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Microsoft.Graph.PrinterShare>
+
+@{
+    ViewBag.Title = "Printer Shares";
+}
+
+<h2>Printer Shares</h2>
+
+<p>Please select a printer to print to</p>
+
+@using (Html.BeginForm("UploadFile", "Printer", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "return validateForm()" }))
+{
+    <input type="hidden" name="selectedPrinterShareId" id="selectedPrinterShareId" />
+
+    <table class="table" id="printerSharesTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Display Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var printerShare in Model)
+            {
+                <tr data-id="@printerShare.Id">
+                    <td>@printerShare.Id</td>
+                    <td>@printerShare.DisplayName</td>
+                    <td>@printerShare.Status.State</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div id="uploadSection" style="display: none;">
+        <div class="form-group">
+            <label for="file">Upload File</label>
+            <input type="file" name="file" id="file" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </div>
+}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var table = document.getElementById("printerSharesTable");
+        var hiddenInput = document.getElementById("selectedPrinterShareId");
+        var uploadSection = document.getElementById("uploadSection");
+
+        table.addEventListener("click", function (event) {
+            var target = event.target;
+            while (target && target.nodeName !== "TR") {
+                target = target.parentElement;
+            }
+            if (target) {
+                var selectedId = target.getAttribute("data-id");
+                hiddenInput.value = selectedId;
+
+                // Highlight the selected row
+                var rows = table.getElementsByTagName("tr");
+                for (var i = 0; i < rows.length; i++) {
+                    rows[i].classList.remove("table-active");
+                }
+                target.classList.add("table-active");
+
+                // Show the upload section
+                uploadSection.style.display = "block";
+            }
+        });
+    });
+
+    function validateForm() {
+        var selectedPrinterShareId = document.getElementById("selectedPrinterShareId").value;
+        var fileInput = document.getElementById("file").value;
+        if (!selectedPrinterShareId) {
+            alert("Please select a printer share before uploading.");
+            return false;
+        }
+        if (!fileInput) {
+            alert("Please select a file to upload.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<style>
+    .table-active {
+        background-color: #f5f5f5;
+    }
+</style>
+
