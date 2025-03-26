@@ -56,7 +56,7 @@ namespace universal_print.Helpers
             // Upload the document content
             var uploadSession = await graphClient.Print.Shares[printerShareId].Jobs[createdPrintJob.Id].Documents[createdPrintJob.Documents[0].Id].CreateUploadSession(printDocument).Request().PostAsync();
             var maxChunkSize = 320 * 1024; // 320 KB
-            var fileUploadTask = new LargeFileUploadTask<DriveItem>(uploadSession, file.InputStream, maxChunkSize, graphClient);
+            var fileUploadTask = new LargeFileUploadTask<DriveItem>(uploadSession, file.InputStream, maxChunkSize);
 
             var uploadResult = await fileUploadTask.UploadAsync();
             if (uploadResult.UploadSucceeded)
