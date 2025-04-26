@@ -25,7 +25,7 @@ namespace universal_print.Helpers
         private static string redirectUri = ConfigurationManager.AppSettings["ida:RedirectUri"];
         private static string authority = "https://login.microsoftonline.com/" + tenantId + "/v2.0";
         private static List<string> graphScopes =
-            new List<string>(ConfigurationManager.AppSettings["ida:AppScopes"].Split(' '));
+            new List<string>(ConfigurationManager.AppSettings["ida:graphScopes"].Split(' '));
 
 
         public static async Task<PrintJob> CreatePrintJobAsync(string printerShareId, HttpPostedFileBase file)

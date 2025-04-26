@@ -22,7 +22,8 @@ namespace universal_print
         private static string appSecret = ConfigurationManager.AppSettings["ida:AppSecret"];
         private static string tenantId = ConfigurationManager.AppSettings["ida:TenantId"];
         private static string redirectUri = ConfigurationManager.AppSettings["ida:RedirectUri"];
-        private static string graphScopes = ConfigurationManager.AppSettings["ida:AppScopes"];
+        private static string graphScopes = ConfigurationManager.AppSettings["ida:GraphScopes"];
+        private static string baseScopes = ConfigurationManager.AppSettings["ida:BaseScopes"];
         private static string authority = "https://login.microsoftonline.com/" + tenantId + "/v2.0";
 
         public void ConfigureAuth(IAppBuilder app)
@@ -36,7 +37,7 @@ namespace universal_print
                 {
                     ClientId = appId,
                     Authority = authority,
-                    Scope = $"openid email profile offline_access {graphScopes}",
+                    Scope = $"{baseScopes} {graphScopes}",
                     RedirectUri = redirectUri,
                     PostLogoutRedirectUri = redirectUri,
                     TokenValidationParameters = new TokenValidationParameters
