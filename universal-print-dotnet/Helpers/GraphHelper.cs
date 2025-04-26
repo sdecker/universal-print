@@ -6,12 +6,8 @@ using universal_print.TokenStorage;
 using Microsoft.Identity.Client;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Security.Claims;
 using System.Web;
-using System.Net.Http;
-using Newtonsoft.Json.Linq;
-using System.IO;
 using System;
 
 namespace universal_print.Helpers
